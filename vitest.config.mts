@@ -25,6 +25,6 @@ export default defineConfig({
     globals: true,
     setupFiles: ['./src/app/tests/setup-test-environment.ts'],
     include: ['./src/**/*.{spec,test}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
-    exclude: ['**/node_modules/**', '**/build/**'],
+    exclude: ['**/node_modules/**', '**/build/**', '**/.next/**'],
   },
 });
