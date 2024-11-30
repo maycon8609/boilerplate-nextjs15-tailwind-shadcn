@@ -1,0 +1,9 @@
+{
+  "counter": {
+    "decrement": "Decremento",
+    "increment": "Incremento"
+  },
+  "landing": {
+    "welcome": "Bem-vindo"
+  }
+}

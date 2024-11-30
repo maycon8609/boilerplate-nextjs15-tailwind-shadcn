@@ -6,7 +6,7 @@ import Page from './page';
 
 describe('Page', () => {
   test('should renders the text', () => {
-    render(<Page />);
+    render(<Page params={{ lang: 'pt-BR' }} />);
 
     const text = screen.getByText('Hello World');
 
