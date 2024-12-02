@@ -12,13 +12,15 @@ export const metadata: Metadata = {
   description: 'Boilerplate Next.js 15 + Tailwind + Shadcn UI',
 };
 
-export default function RootLayout({
-  children,
-  params,
-}: Readonly<{
-  children: React.ReactNode;
-  params: { lang: Locale };
-}>) {
+export default async function RootLayout(
+  props: Readonly<{
+    children: React.ReactNode;
+    params: { lang: Locale };
+  }>,
+) {
+  const { children } = props;
+  const params = await props.params;
+
   return (
     <html lang={params.lang}>
       <body className={inter.className}>{children}</body>

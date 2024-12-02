@@ -5,10 +5,10 @@ import { render, screen } from '@/app/tests/react-test-utils';
 import Page from './page';
 
 describe('Page', () => {
-  test('should renders the text', () => {
+  test('should render the text', () => {
     render(<Page params={{ lang: 'pt-BR' }} />);
 
-    const text = screen.getByText('Hello World');
+    const text = screen.getByText('Current locale:');
 
     expect(text).toBeInTheDocument();
   });

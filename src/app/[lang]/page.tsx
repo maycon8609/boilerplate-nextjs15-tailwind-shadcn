@@ -3,11 +3,10 @@ import { Locale } from '@/features/internationalization/i18n-config';
 
 import { CounterComponent } from './counter-component';
 
-export default async function Home({
-  params: { lang },
-}: {
-  params: { lang: Locale };
-}) {
+export default async function Home(props: { params: { lang: Locale } }) {
+  const params = await props.params;
+  const { lang } = params;
+
   const dictionary = await getDictionary(lang);
 
   return (
